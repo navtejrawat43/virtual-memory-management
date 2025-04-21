@@ -21,7 +21,7 @@
   const ctx = canvas.getContext('2d');
 
   const image = new Image();
-  image.src = 'try.jpg'; // Replace with your image
+  image.src = 'try.png'; // Replace with your image
 
   let scale = 1;
   let minScale = 0.1;
@@ -35,12 +35,16 @@
   image.onload = () => {
     fitToTopLeft();
     draw();
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    console.log(data);
   };
 
   function fitToTopLeft() {
     scale = Math.min(canvas.width / image.width, canvas.height / image.height);
     originX = 0;
     originY = 0;
+    
   }
 
   function draw() {
