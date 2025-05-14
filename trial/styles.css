@@ -1,5 +1,32 @@
-.picture{
-    background-color: black;   
-    height: 300px;
-    width: 300px;
+canvas {
+  border: 1px solid black;
+  display: block;
+  margin: 20px auto;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  margin: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.display, .stats {
+  text-align: center;
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 4px 8px;
 }
